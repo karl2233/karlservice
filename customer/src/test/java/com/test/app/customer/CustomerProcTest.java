@@ -30,11 +30,12 @@ public class CustomerProcTest {
        // assertNull(customerProc.saveUser(employee));
     }
 //
-    @Test
-    public void testUpdateUserCorrectPhone(){
-        Assertions.assertEquals(customerProc.updateEmployee(19,"+9613293860").isStatus(),true);
-    }
+@Test
+public void testUpdateUserCorrectPhone(){
+    Assertions.assertEquals(customerProc.updateEmployee(19,"+9613293860").isStatus(),true);
+}
 //
+
     @Test
     public void testUpdateUserWrongPhone(){
         Assertions.assertEquals(customerProc.updateEmployee(1,"+961").isStatus(),false);

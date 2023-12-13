@@ -2,6 +2,7 @@ package com.test.app.customer.utils;
 
 import javax.persistence.*;
 
+
 @Entity
 @Table(name = "employees")
 public class Employee {
