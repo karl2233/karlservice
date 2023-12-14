@@ -25,21 +25,18 @@ public class numberProc implements numberProcImpl {
             System.out.println(phoneNumber.getPhoneNumber());
             if (phoneNumber.getCountryCode() == null) {
                 stat.setStatus(false);
-                stat.setHttpStatus(HttpStatus.FORBIDDEN);
                 stat.setStatusReason("wrong phone number");
                 return stat;
             }
 
             stat.setStatus(true);
-            stat.setHttpStatus(HttpStatus.OK);
             stat.setStatusReason("correct phone number");
             stat.setPhoneNumber(String.valueOf(phoneNumber.getPhoneNumber()));
             stat.setCountryName(phoneNumber.getCountryCode());
             return stat;
         } catch (RuntimeException e) {
-            stat.setStatus(true);
-            stat.setHttpStatus(HttpStatus.INTERNAL_SERVER_ERROR);
-            stat.setStatusReason("correct phone number");
+            stat.setStatus(false);
+            stat.setStatusReason("Something went wrong");
             return stat;
         }
     }

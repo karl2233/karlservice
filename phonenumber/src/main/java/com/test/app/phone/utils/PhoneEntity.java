@@ -1,17 +1,12 @@
 package com.test.app.phone.utils;
 
 public class PhoneEntity {
-    public String getCountryCode() {
-        return CountryCode;
-    }
 
     public String getCountryName() {
         return countryName;
     }
 
-    public void setCountryCode(String cCountryCode) {
-        this.CountryCode = cCountryCode;
-    }
+
 
     public void setCountryName(String countryName) {
         this.countryName = countryName;
@@ -25,7 +20,7 @@ public class PhoneEntity {
         return phoneNumber;
     }
 
-    private String CountryCode;
+
     private String countryName;
     private String phoneNumber;
 

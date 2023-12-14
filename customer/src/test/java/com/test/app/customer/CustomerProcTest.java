@@ -20,30 +20,30 @@ public class CustomerProcTest {
     @Test
    public void testSaveUserCorrectPhone(){
         Employee employee = new Employee("karl","samaha","+9613293860");
-       Assertions.assertEquals(customerProc.saveUser(employee).isStatus(),true);
+       Assertions.assertEquals(customerProc.saveUser(employee).getBody().isStatus(),true);
     }
-//
+////
     @Test
     public void testSaveUserIncorrectPhone(){
        Employee employee = new Employee("karl","samaha","+961");
-        Assertions.assertEquals(customerProc.saveUser(employee).isStatus(),false);
+        Assertions.assertEquals(customerProc.saveUser(employee).getBody().isStatus(),false);
        // assertNull(customerProc.saveUser(employee));
     }
-//
+////
 @Test
 public void testUpdateUserCorrectPhone(){
-    Assertions.assertEquals(customerProc.updateEmployee(19,"+9613293860").isStatus(),true);
+    Assertions.assertEquals(customerProc.updateEmployee(19,"+9613293860").getBody().isStatus(),true);
 }
+////
 //
-
     @Test
     public void testUpdateUserWrongPhone(){
-        Assertions.assertEquals(customerProc.updateEmployee(1,"+961").isStatus(),false);
+        Assertions.assertEquals(customerProc.updateEmployee(1,"+961").getBody().isStatus(),false);
     }
-//
+////
     @Test
     public void testUpdateUserWrongId(){
-        Assertions.assertEquals(customerProc.updateEmployee(100,"+9613293860").isStatus(),false);
+        Assertions.assertEquals(customerProc.updateEmployee(100,"+9613293860").getBody().isStatus(),false);
     }
 //
 }

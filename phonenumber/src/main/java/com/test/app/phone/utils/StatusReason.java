@@ -5,8 +5,6 @@ import org.springframework.http.HttpStatus;
 public class StatusReason {
     public boolean status;
     public String statusReason;
-    public HttpStatus httpStatus;
-
 
     private String countryName;
     private String phoneNumber;
@@ -48,11 +46,5 @@ public class StatusReason {
         this.statusReason = statusReason;
     }
 
-    public HttpStatus getHttpStatus() {
-        return httpStatus;
-    }
 
-    public void setHttpStatus(HttpStatus httpStatus) {
-        this.httpStatus = httpStatus;
-    }
 }
